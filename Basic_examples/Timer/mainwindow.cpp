@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QDateTime>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -20,4 +21,7 @@ MainWindow::~MainWindow()
 void MainWindow::myFunct()
 {
     qDebug() << "Update!!";
+    QTime time = QTime::currentTime();
+    QString time_txt = time.toString("hh:mm:ss");
+    ui->label->setText(time_txt);
 }
