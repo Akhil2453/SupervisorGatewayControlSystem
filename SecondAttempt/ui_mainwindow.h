@@ -19,6 +19,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -36,6 +37,8 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QGridLayout *gridLayout_2;
+    QGridLayout *gridLayout;
     QSplitter *splitter_2;
     QLabel *labelTime;
     QSplitter *splitter;
@@ -144,7 +147,16 @@ public:
     QDial *dial_5;
     QSpacerItem *horizontalSpacer_28;
     QLabel *label_28;
+    QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *horizontalLayout_6;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QLabel *label;
     QMenuBar *menuBar;
+    QMenu *menuFile;
+    QMenu *menuEdir;
+    QMenu *menuHelp;
+    QMenu *menuView;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -155,9 +167,15 @@ public:
         MainWindow->resize(1095, 688);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        gridLayout_2 = new QGridLayout(centralWidget);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        gridLayout = new QGridLayout();
+        gridLayout->setSpacing(6);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         splitter_2 = new QSplitter(centralWidget);
         splitter_2->setObjectName(QStringLiteral("splitter_2"));
-        splitter_2->setGeometry(QRect(10, 30, 1239, 290));
         splitter_2->setOrientation(Qt::Vertical);
         labelTime = new QLabel(splitter_2);
         labelTime->setObjectName(QStringLiteral("labelTime"));
@@ -807,10 +825,57 @@ public:
 
         splitter->addWidget(layoutWidget_2);
         splitter_2->addWidget(splitter);
+
+        gridLayout->addWidget(splitter_2, 0, 0, 1, 1);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setSpacing(6);
+        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setFont(font);
+
+        horizontalLayout_6->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setFont(font);
+
+        horizontalLayout_6->addWidget(pushButton_2);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_6);
+
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        QFont font2;
+        font2.setPointSize(18);
+        label->setFont(font2);
+        label->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label);
+
+
+        gridLayout->addLayout(verticalLayout_3, 1, 0, 1, 1);
+
+
+        gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1095, 21));
+        menuFile = new QMenu(menuBar);
+        menuFile->setObjectName(QStringLiteral("menuFile"));
+        menuEdir = new QMenu(menuBar);
+        menuEdir->setObjectName(QStringLiteral("menuEdir"));
+        menuHelp = new QMenu(menuBar);
+        menuHelp->setObjectName(QStringLiteral("menuHelp"));
+        menuView = new QMenu(menuBar);
+        menuView->setObjectName(QStringLiteral("menuView"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -836,9 +901,18 @@ public:
         label_28->setBuddy(dial_2);
 #endif // QT_NO_SHORTCUT
 
+        menuBar->addAction(menuFile->menuAction());
+        menuBar->addAction(menuEdir->menuAction());
+        menuBar->addAction(menuView->menuAction());
+        menuBar->addAction(menuHelp->menuAction());
+
         retranslateUi(MainWindow);
         QObject::connect(dial_2, SIGNAL(valueChanged(int)), spinBox_2, SLOT(setValue(int)));
         QObject::connect(spinBox_2, SIGNAL(valueChanged(int)), dial_2, SLOT(setValue(int)));
+        QObject::connect(dial_4, SIGNAL(valueChanged(int)), spinBox_4, SLOT(setValue(int)));
+        QObject::connect(spinBox_4, SIGNAL(valueChanged(int)), dial_4, SLOT(setValue(int)));
+        QObject::connect(dial_5, SIGNAL(valueChanged(int)), spinBox_5, SLOT(setValue(int)));
+        QObject::connect(spinBox_5, SIGNAL(valueChanged(int)), dial_5, SLOT(setValue(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -892,6 +966,13 @@ public:
         pushButton_45->setText(QApplication::translate("MainWindow", "MAN", 0));
         label_27->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         label_28->setText(QApplication::translate("MainWindow", "TextLabel", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "ON", 0));
+        pushButton_2->setText(QApplication::translate("MainWindow", "OFF", 0));
+        label->setText(QApplication::translate("MainWindow", "ACU ON/OFF Control", 0));
+        menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
+        menuEdir->setTitle(QApplication::translate("MainWindow", "Edit", 0));
+        menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0));
+        menuView->setTitle(QApplication::translate("MainWindow", "View", 0));
     } // retranslateUi
 
 };
