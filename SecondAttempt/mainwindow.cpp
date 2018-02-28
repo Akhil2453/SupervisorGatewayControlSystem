@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QtWidgets>
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -30,28 +31,6 @@ void MainWindow::Time()
 
 }
 
-void MainWindow::on_pushButton_clicked(bool checked)
-{
-    int a;
-    if(checked == true){
-        a = 1 ;
-        //send this value to ACU to ON the ACU
-        qDebug() << "ON ACU" ;
-        qDebug() << a << endl ;
-    }
-
-}
-
-void MainWindow::on_pushButton_2_clicked(bool checked)
-{
-    int b;
-    if(checked == true){
-        b=1;
-        //send this value to ACU to OFF the ACU
-        qDebug() << "OFF ACU" ;
-        qDebug() << b << endl ;
-    }
-}
 
 void MainWindow::on_dial_2_actionTriggered(int action)
 {
@@ -85,4 +64,13 @@ void MainWindow::on_dial_5_actionTriggered(int action)
         qDebug() << "Elevation" ;
         qDebug() << d << endl;
     }
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+//    clientDialog cDialog;
+//    cDialog.setModal(true);
+//    cDialog.exec();
+    cDialog = new clientDialog(this);
+    cDialog ->show();
 }
