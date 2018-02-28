@@ -96,10 +96,14 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->Time(); break;
-        case 1: _t->on_dial_2_actionTriggered((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->on_dial_4_actionTriggered((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->on_dial_5_actionTriggered((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->on_pushButton_clicked(); break;
+        case 1: _t->on_pushButton_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 2: _t->on_pushButton_2_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 3: _t->on_dial_2_actionTriggered((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 4: _t->on_dial_4_actionTriggered((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: _t->on_dial_5_actionTriggered((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 6: _t->on_textEdit_3_textChanged(); break;
+        case 7: _t->on_pushButton_clicked(); break;
+        case 8: _t->on_pushButton_2_clicked(); break;
         default: ;
         }
     }

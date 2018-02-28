@@ -14,6 +14,7 @@ class clientDialog : public QDialog
 public:
     explicit clientDialog(QWidget *parent = 0);
     ~clientDialog();
+    void setLabelText(QString str);
 
 private:
     Ui::clientDialog *ui;

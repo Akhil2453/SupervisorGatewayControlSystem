@@ -12,3 +12,10 @@ clientDialog::~clientDialog()
 {
     delete ui;
 }
+
+void clientDialog::setLabelText(QString str)
+{
+    ui->azimuth->setText(str);
+    ui->cElevation->setText(str);
+    ui->elevation->setText(str);
+}

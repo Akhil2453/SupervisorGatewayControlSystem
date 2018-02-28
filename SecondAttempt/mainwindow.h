@@ -41,7 +41,8 @@ private:
     Ui::MainWindow *ui;
     QTimer *timer;
 
-    clientDialog *cDialog;
+    clientDialog *cDialog = new clientDialog;
+
 };
 
 #endif // MAINWINDOW_H

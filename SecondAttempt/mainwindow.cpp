@@ -1,10 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "ui_clientdialog.h"
 #include <QDateTime>
 #include <QDebug>
 #include <QtWidgets>
 
-
+int a;
+int c;
+int e;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -35,34 +38,41 @@ void MainWindow::Time()
 void MainWindow::on_dial_2_actionTriggered(int action)
 {
 
-    int d;
+    //int d;
+    clientDialog cDial;
     if(action>=0){
 
-        d = ui->dial_2->value();
+        a = ui->dial_2->value();
+        QString s = QString::number(a);
         qDebug() << "Azimuth" ;
-        qDebug() << d << endl;
+        qDebug() << s << endl;
+        cDial.setLabelText(s);
     }
 }
 
 void MainWindow::on_dial_4_actionTriggered(int action)
 {
-    int d;
+    //int d;
     if(action>=0){
 
-        d = ui->dial_2->value();
+        c = ui->dial_2->value();
         qDebug() << "Cross Elevation" ;
-        qDebug() << d << endl;
+        qDebug() << c << endl;
     }
 }
 
 void MainWindow::on_dial_5_actionTriggered(int action)
 {
-    int d;
+    //int d;
+    clientDialog cDial;
     if(action>=0){
 
-        d = ui->dial_2->value();
+        e = ui->dial_2->value();
+        QString s = QString::number(e);
         qDebug() << "Elevation" ;
-        qDebug() << d << endl;
+        qDebug() << s << endl;
+        cDial.setLabelText(s);
+        cDial.show();
     }
 }
 
@@ -72,5 +82,6 @@ void MainWindow::on_pushButton_clicked()
 //    cDialog.setModal(true);
 //    cDialog.exec();
     cDialog = new clientDialog(this);
+
     cDialog ->show();
 }
