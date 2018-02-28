@@ -1243,7 +1243,7 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="pushButtonOn">
             <property name="font">
              <font>
               <pointsize>24</pointsize>

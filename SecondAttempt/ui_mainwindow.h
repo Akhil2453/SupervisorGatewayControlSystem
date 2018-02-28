@@ -149,7 +149,7 @@ public:
     QLabel *label_28;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout_6;
-    QPushButton *pushButton;
+    QPushButton *pushButtonOn;
     QPushButton *pushButton_2;
     QLabel *label;
     QMenuBar *menuBar;
@@ -834,11 +834,11 @@ public:
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(6);
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setFont(font);
+        pushButtonOn = new QPushButton(centralWidget);
+        pushButtonOn->setObjectName(QStringLiteral("pushButtonOn"));
+        pushButtonOn->setFont(font);
 
-        horizontalLayout_6->addWidget(pushButton);
+        horizontalLayout_6->addWidget(pushButtonOn);
 
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
@@ -966,7 +966,7 @@ public:
         pushButton_45->setText(QApplication::translate("MainWindow", "MAN", 0));
         label_27->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         label_28->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "ON", 0));
+        pushButtonOn->setText(QApplication::translate("MainWindow", "ON", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "OFF", 0));
         label->setText(QApplication::translate("MainWindow", "ACU ON/OFF Control", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
