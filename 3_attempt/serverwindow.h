@@ -25,6 +25,12 @@ private slots:
 
     void on_OFFpushButton_clicked();
 
+    void on_AzimuthDial_actionTriggered(int action);
+
+    void on_CrsElDial_actionTriggered(int action);
+
+    void on_ElDial_actionTriggered(int action);
+
 private:
     Ui::serverWindow *ui;
 

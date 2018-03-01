@@ -15,6 +15,9 @@ public:
     explicit clientWindow(QWidget *parent = 0);
     ~clientWindow();
 
+public slots:
+    void setLineText(QString str, QString stra, QString strb);
+
 private:
     Ui::clientWindow *ui;
 };

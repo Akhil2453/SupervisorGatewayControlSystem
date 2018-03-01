@@ -6,449 +6,1509 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>822</width>
-    <height>602</height>
+    <width>1183</width>
+    <height>739</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>serverWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color: rgb(255, 255, 174);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QGroupBox" name="ACU_onoff">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>420</y>
-      <width>351</width>
-      <height>122</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>ACU_on/off</string>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QPushButton" name="ONpushButton">
-           <property name="text">
-            <string>ON</string>
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0" colspan="2">
+     <widget class="QSplitter" name="splitter_5">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QLabel" name="labelTime">
+       <property name="font">
+        <font>
+         <family>Comic Sans MS</family>
+         <pointsize>35</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(85, 170, 0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QSplitter" name="splitter_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QGroupBox" name="Azimuth">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(216, 167, 255);</string>
+        </property>
+        <property name="title">
+         <string>Azimuth</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QSplitter" name="splitter">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
            </property>
+           <widget class="QWidget" name="">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="labelAzimuth">
+               <property name="font">
+                <font>
+                 <pointsize>18</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Azimuth</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>100</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ProgramPushButtonA">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000</width>
+                 <height>500</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Program</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="">
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QLabel" name="AzimuthDialLabel">
+                   <property name="font">
+                    <font>
+                     <pointsize>15</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDial" name="AzimuthDial">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(187, 255, 171);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>88</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QPushButton" name="pushButtonCL">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>CL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonSL">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>SL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonPL">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>PL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonAL">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>AL</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <item>
+                  <widget class="QLabel" name="DemandLabelAzimuth">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Demand</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="spinBoxAzimuth">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <widget class="QLabel" name="SpeedLabelAzimuth">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Speed</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxAPS">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="PosErrLabelAzimuth">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Pos. Err.</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxAPE">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="">
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QPushButton" name="ONpushButtonAZ">
+               <property name="styleSheet">
+                <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:0.495 rgba(255, 255, 255, 255), stop:0.505 rgba(255, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));</string>
+               </property>
+               <property name="text">
+                <string>ON/OFF</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="STBYpushButtonAZ">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>STBY</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="SLEWpushButtonAZ">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>SLEW</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="MANpushButtonAZ">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>MAN</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="CrossElevation">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(216, 167, 255);</string>
+        </property>
+        <property name="title">
+         <string>CrossElevation</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QSplitter" name="splitter_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QWidget" name="layoutWidget">
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="labelCrossElevation">
+               <property name="font">
+                <font>
+                 <pointsize>18</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>CrossElevation</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pProgramPushButtonCE">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000</width>
+                 <height>500</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Program</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="layoutWidget_2">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <spacer name="horizontalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="CrsElDialLabel">
+                   <property name="font">
+                    <font>
+                     <pointsize>15</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDial" name="CrsElDial">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(187, 255, 171);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>88</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QPushButton" name="pushButtonCL_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>CL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonSL_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>SL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonPL_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>PL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonAL_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>AL</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="DemandLabelCrsEl">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Demand</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="spinBoxCrsEl">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="QLabel" name="SpeedLabelCrsEl">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Speed</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxCEPS">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_10">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_11">
+                 <item>
+                  <widget class="QLabel" name="PosErrLabelCrsEl">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Pos. Err.</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxCEPE">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="layoutWidget_3">
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QPushButton" name="ONpushButtonCE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:0.495 rgba(255, 255, 255, 255), stop:0.505 rgba(255, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));</string>
+               </property>
+               <property name="text">
+                <string>ON/OFF</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="STBYpushButtonCE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>STBY</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="SLEWpushButtonCE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>SLEW</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="MANpushButtonCE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>MAN</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="Elevation">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(216, 167, 255);</string>
+        </property>
+        <property name="title">
+         <string>Elevation</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QSplitter" name="splitter_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QWidget" name="layoutWidget_4">
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QLabel" name="labelElevation">
+               <property name="font">
+                <font>
+                 <pointsize>18</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Elevation</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_11">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>80</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pProgramPushButtonE">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000</width>
+                 <height>500</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Program</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="layoutWidget_5">
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_13">
+               <item>
+                <spacer name="horizontalSpacer_12">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="ElDialLabel">
+                   <property name="font">
+                    <font>
+                     <pointsize>15</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDial" name="ElDial">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(187, 255, 171);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_13">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>88</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <item>
+                  <widget class="QPushButton" name="pushButtonCL_3">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>CL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonSL_3">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>SL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonPL_3">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>PL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonAL_3">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 85, 127);</string>
+                   </property>
+                   <property name="text">
+                    <string>AL</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_15">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="DemandLabelEl">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Demand</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="spinBoxEl">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_14">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <item>
+                  <widget class="QLabel" name="SpeedLabelEl">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Speed</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxEPS">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_15">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QLabel" name="PosErrLabelEl">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Pos. Err.</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxEPE">
+                   <property name="font">
+                    <font>
+                     <family>Courier</family>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="layoutWidget_6">
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QPushButton" name="ONpushButtonE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:0.495 rgba(255, 255, 255, 255), stop:0.505 rgba(255, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));</string>
+               </property>
+               <property name="text">
+                <string>ON/OFF</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="STBYpushButtonE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>STBY</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="SLEWpushButtonE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>SLEW</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="MANpushButtonE">
+               <property name="styleSheet">
+                <string notr="true">background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));</string>
+               </property>
+               <property name="text">
+                <string>MAN</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="ACU_onoff">
+      <property name="title">
+       <string>ACU_on/off</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QPushButton" name="OFFpushButton">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="ONpushButton">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 255, 0);</string>
+             </property>
+             <property name="text">
+              <string>ON</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="OFFpushButton">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>OFF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLabel" name="ACU">
+           <property name="font">
+            <font>
+             <family>Monotype Corsiva</family>
+             <pointsize>35</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="text">
-            <string>OFF</string>
+            <string>ACU On-OFF</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="indent">
+            <number>-1</number>
            </property>
           </widget>
          </item>
         </layout>
        </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="PrgModeGroupBox">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 85, 255);</string>
+      </property>
+      <property name="title">
+       <string>ProgMode</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_22">
        <item>
-        <widget class="QLabel" name="ACU">
-         <property name="font">
-          <font>
-           <family>Monotype Corsiva</family>
-           <pointsize>35</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
+        <widget class="QSplitter" name="splitter_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-         <property name="text">
-          <string>ACU On-OFF</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-         <property name="indent">
-          <number>-1</number>
-         </property>
+         <widget class="QWidget" name="">
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_17">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>SAT ID</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <widget class="QRadioButton" name="radioButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AutoSequence">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>8</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 85, 255);</string>
+               </property>
+               <property name="text">
+                <string>Auto Sequence</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="">
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_18">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Program Input</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_2">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="midLineWidth">
+                <number>6</number>
+               </property>
+               <property name="text">
+                <string>Program Data Source File</string>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::PlainText</enum>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_3">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="">
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_20">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_20">
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>AOS</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDateEdit" name="dateEdit">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTimeEdit" name="timeEdit">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_21">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>LOS</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDateEdit" name="dateEdit_2">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTimeEdit" name="timeEdit_2">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_21">
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(170, 170, 255);</string>
+               </property>
+               <property name="text">
+                <string>Send Program Data</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
       </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QLabel" name="labelTime">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>801</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Comic Sans MS</family>
-      <pointsize>35</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(85, 170, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="Azimuth">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>50</y>
-      <width>401</width>
-      <height>341</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(216, 167, 255);</string>
-    </property>
-    <property name="title">
-     <string>Azimuth</string>
-    </property>
-    <widget class="QWidget" name="">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>391</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="labelAzimuth">
-        <property name="font">
-         <font>
-          <pointsize>18</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Azimuth</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>100</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="ProgramPushButtonA">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>1000</width>
-          <height>500</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Program</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>348</width>
-       <height>173</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QLabel" name="AzimuthDialLabel">
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>0</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QDial" name="AzimuthDial">
-            <property name="styleSheet">
-             <string notr="true">alternate-background-color: rgb(187, 255, 171);</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>88</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_6">
-          <item>
-           <widget class="QPushButton" name="pushButtonCL">
-            <property name="text">
-             <string>CL</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButtonSL">
-            <property name="text">
-             <string>SL</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButtonPL">
-            <property name="text">
-             <string>PL</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButtonAL">
-            <property name="text">
-             <string>AL</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <widget class="QLabel" name="DemandLabelAzimuth">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Demand</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="spinBoxAzimuth">
-            <property name="font">
-             <font>
-              <family>Courier</family>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <widget class="QLabel" name="SpeedLabelAzimuth">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Speed</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QDoubleSpinBox" name="doubleSpinBoxAPS">
-            <property name="font">
-             <font>
-              <family>Courier</family>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_5">
-          <item>
-           <widget class="QLabel" name="PosErrLabelAzimuth">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Pos. Err.</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QDoubleSpinBox" name="doubleSpinBoxAPE">
-            <property name="font">
-             <font>
-              <family>Courier</family>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </widget>
+     </widget>
+    </item>
+   </layout>
    <zorder>ACU_onoff</zorder>
    <zorder>labelTime</zorder>
    <zorder>Azimuth</zorder>
    <zorder>SpeedLabelAzimuth</zorder>
+   <zorder>CrossElevation</zorder>
+   <zorder>Elevation</zorder>
+   <zorder>PrgModeGroupBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>822</width>
+     <width>1183</width>
      <height>21</height>
     </rect>
    </property>
@@ -497,12 +1557,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>299</x>
-     <y>246</y>
+     <x>141</x>
+     <y>216</y>
     </hint>
     <hint type="destinationlabel">
-     <x>284</x>
-     <y>350</y>
+     <x>79</x>
+     <y>327</y>
     </hint>
    </hints>
   </connection>
@@ -513,12 +1573,12 @@
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>247</x>
-     <y>349</y>
+     <x>48</x>
+     <y>326</y>
     </hint>
     <hint type="destinationlabel">
-     <x>249</x>
-     <y>302</y>
+     <x>91</x>
+     <y>272</y>
     </hint>
    </hints>
   </connection>
@@ -529,12 +1589,108 @@
    <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>274</x>
-     <y>246</y>
+     <x>116</x>
+     <y>216</y>
     </hint>
     <hint type="destinationlabel">
-     <x>218</x>
-     <y>257</y>
+     <x>60</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CrsElDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxCrsEl</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>513</x>
+     <y>256</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>423</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxCrsEl</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>CrsElDial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CrsElDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>CrsElDialLabel</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>472</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ElDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxEl</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>848</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxEl</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ElDial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>761</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>823</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ElDial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ElDialLabel</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>827</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>805</x>
+     <y>233</y>
     </hint>
    </hints>
   </connection>
