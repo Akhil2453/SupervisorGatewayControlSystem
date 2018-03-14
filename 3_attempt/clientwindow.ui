@@ -23,17 +23,23 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QDial" name="dialAZ">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(85, 170, 127);</string>
+         <widget class="QLineEdit" name="lineEditAz">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEditAz"/>
-        </item>
-        <item>
          <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -68,19 +74,6 @@
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <widget class="QSlider" name="verticalSliderCE">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
-            <horstretch>25</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-         </widget>
-        </item>
         <item>
          <widget class="QLineEdit" name="lineEditCE"/>
         </item>
@@ -124,13 +117,6 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QSlider" name="horizontalSliderE">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLineEdit" name="lineEditE"/>
         </item>
        </layout>
@@ -153,15 +139,6 @@
      </layout>
     </item>
    </layout>
-   <zorder>lineEditAz</zorder>
-   <zorder>lineEditCE</zorder>
-   <zorder>lineEditE</zorder>
-   <zorder>dialAZ</zorder>
-   <zorder>verticalSliderCE</zorder>
-   <zorder>horizontalSliderE</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label_3</zorder>
    <zorder></zorder>
    <zorder>horizontalSpacer</zorder>
    <zorder>horizontalSpacer_2</zorder>
