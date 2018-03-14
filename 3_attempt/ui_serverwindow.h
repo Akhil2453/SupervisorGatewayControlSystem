@@ -49,12 +49,12 @@ public:
     QGroupBox *Azimuth;
     QGridLayout *gridLayout_2;
     QSplitter *splitter;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_2;
     QLabel *labelAzimuth;
     QSpacerItem *horizontalSpacer;
     QPushButton *ProgramPushButtonA;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout_5;
     QSpacerItem *horizontalSpacer_4;
@@ -79,7 +79,7 @@ public:
     QVBoxLayout *verticalLayout_5;
     QLabel *PosErrLabelAzimuth;
     QDoubleSpinBox *doubleSpinBoxAPE;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_6;
     QPushButton *ONpushButtonAZ;
     QPushButton *STBYpushButtonAZ;
@@ -88,7 +88,7 @@ public:
     QGroupBox *CrossElevation;
     QGridLayout *gridLayout_3;
     QSplitter *splitter_2;
-    QWidget *layoutWidget;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_7;
     QLabel *labelCrossElevation;
     QSpacerItem *horizontalSpacer_6;
@@ -167,13 +167,15 @@ public:
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
+    QLabel *indicator1;
     QPushButton *ONpushButton;
     QPushButton *OFFpushButton;
+    QLabel *indicator2;
     QLabel *ACU;
     QGroupBox *PrgModeGroupBox;
     QVBoxLayout *verticalLayout_22;
     QSplitter *splitter_6;
-    QWidget *widget3;
+    QWidget *layoutWidget4;
     QHBoxLayout *horizontalLayout_18;
     QVBoxLayout *verticalLayout_17;
     QLabel *label;
@@ -181,7 +183,7 @@ public:
     QHBoxLayout *horizontalLayout_17;
     QRadioButton *radioButton;
     QPushButton *AutoSequence;
-    QWidget *widget4;
+    QWidget *layoutWidget5;
     QHBoxLayout *horizontalLayout_19;
     QVBoxLayout *verticalLayout_18;
     QLabel *label_2;
@@ -190,7 +192,7 @@ public:
     QVBoxLayout *verticalLayout_19;
     QLabel *label_3;
     QLineEdit *lineEdit_3;
-    QWidget *widget5;
+    QWidget *layoutWidget6;
     QHBoxLayout *horizontalLayout_22;
     QVBoxLayout *verticalLayout_20;
     QHBoxLayout *horizontalLayout_20;
@@ -252,14 +254,14 @@ public:
         splitter = new QSplitter(Azimuth);
         splitter->setObjectName(QStringLiteral("splitter"));
         splitter->setOrientation(Qt::Vertical);
-        widget = new QWidget(splitter);
-        widget->setObjectName(QStringLiteral("widget"));
-        horizontalLayout_2 = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(splitter);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        labelAzimuth = new QLabel(widget);
+        labelAzimuth = new QLabel(layoutWidget);
         labelAzimuth->setObjectName(QStringLiteral("labelAzimuth"));
         QFont font1;
         font1.setPointSize(18);
@@ -274,7 +276,7 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
-        ProgramPushButtonA = new QPushButton(widget);
+        ProgramPushButtonA = new QPushButton(layoutWidget);
         ProgramPushButtonA->setObjectName(QStringLiteral("ProgramPushButtonA"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -290,10 +292,10 @@ public:
 
         horizontalLayout_2->addWidget(ProgramPushButtonA);
 
-        splitter->addWidget(widget);
-        widget1 = new QWidget(splitter);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        verticalLayout_3 = new QVBoxLayout(widget1);
+        splitter->addWidget(layoutWidget);
+        layoutWidget1 = new QWidget(splitter);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget1);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
@@ -308,7 +310,7 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        AzimuthDialLabel = new QLabel(widget1);
+        AzimuthDialLabel = new QLabel(layoutWidget1);
         AzimuthDialLabel->setObjectName(QStringLiteral("AzimuthDialLabel"));
         QFont font3;
         font3.setPointSize(15);
@@ -319,7 +321,7 @@ public:
 
         horizontalLayout_3->addWidget(AzimuthDialLabel);
 
-        AzimuthDial = new QDial(widget1);
+        AzimuthDial = new QDial(layoutWidget1);
         AzimuthDial->setObjectName(QStringLiteral("AzimuthDial"));
         AzimuthDial->setStyleSheet(QStringLiteral("background-color: rgb(187, 255, 171);"));
 
@@ -335,25 +337,25 @@ public:
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setSpacing(6);
         verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
-        pushButtonCL = new QPushButton(widget1);
+        pushButtonCL = new QPushButton(layoutWidget1);
         pushButtonCL->setObjectName(QStringLiteral("pushButtonCL"));
         pushButtonCL->setStyleSheet(QStringLiteral("background-color: rgb(255, 85, 127);"));
 
         verticalLayout_6->addWidget(pushButtonCL);
 
-        pushButtonSL = new QPushButton(widget1);
+        pushButtonSL = new QPushButton(layoutWidget1);
         pushButtonSL->setObjectName(QStringLiteral("pushButtonSL"));
         pushButtonSL->setStyleSheet(QStringLiteral("background-color: rgb(255, 85, 127);"));
 
         verticalLayout_6->addWidget(pushButtonSL);
 
-        pushButtonPL = new QPushButton(widget1);
+        pushButtonPL = new QPushButton(layoutWidget1);
         pushButtonPL->setObjectName(QStringLiteral("pushButtonPL"));
         pushButtonPL->setStyleSheet(QStringLiteral("background-color: rgb(255, 85, 127);"));
 
         verticalLayout_6->addWidget(pushButtonPL);
 
-        pushButtonAL = new QPushButton(widget1);
+        pushButtonAL = new QPushButton(layoutWidget1);
         pushButtonAL->setObjectName(QStringLiteral("pushButtonAL"));
         pushButtonAL->setStyleSheet(QStringLiteral("background-color: rgb(255, 85, 127);"));
 
@@ -371,14 +373,14 @@ public:
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        DemandLabelAzimuth = new QLabel(widget1);
+        DemandLabelAzimuth = new QLabel(layoutWidget1);
         DemandLabelAzimuth->setObjectName(QStringLiteral("DemandLabelAzimuth"));
         DemandLabelAzimuth->setFont(font2);
         DemandLabelAzimuth->setAlignment(Qt::AlignCenter);
 
         verticalLayout_2->addWidget(DemandLabelAzimuth);
 
-        spinBoxAzimuth = new QSpinBox(widget1);
+        spinBoxAzimuth = new QSpinBox(layoutWidget1);
         spinBoxAzimuth->setObjectName(QStringLiteral("spinBoxAzimuth"));
         QFont font4;
         font4.setFamily(QStringLiteral("Courier"));
@@ -399,14 +401,14 @@ public:
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        SpeedLabelAzimuth = new QLabel(widget1);
+        SpeedLabelAzimuth = new QLabel(layoutWidget1);
         SpeedLabelAzimuth->setObjectName(QStringLiteral("SpeedLabelAzimuth"));
         SpeedLabelAzimuth->setFont(font2);
         SpeedLabelAzimuth->setAlignment(Qt::AlignCenter);
 
         verticalLayout_4->addWidget(SpeedLabelAzimuth);
 
-        doubleSpinBoxAPS = new QDoubleSpinBox(widget1);
+        doubleSpinBoxAPS = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBoxAPS->setObjectName(QStringLiteral("doubleSpinBoxAPS"));
         doubleSpinBoxAPS->setFont(font4);
         doubleSpinBoxAPS->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
@@ -424,14 +426,14 @@ public:
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        PosErrLabelAzimuth = new QLabel(widget1);
+        PosErrLabelAzimuth = new QLabel(layoutWidget1);
         PosErrLabelAzimuth->setObjectName(QStringLiteral("PosErrLabelAzimuth"));
         PosErrLabelAzimuth->setFont(font2);
         PosErrLabelAzimuth->setAlignment(Qt::AlignCenter);
 
         verticalLayout_5->addWidget(PosErrLabelAzimuth);
 
-        doubleSpinBoxAPE = new QDoubleSpinBox(widget1);
+        doubleSpinBoxAPE = new QDoubleSpinBox(layoutWidget1);
         doubleSpinBoxAPE->setObjectName(QStringLiteral("doubleSpinBoxAPE"));
         doubleSpinBoxAPE->setFont(font4);
         doubleSpinBoxAPE->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
@@ -445,39 +447,39 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_4);
 
-        splitter->addWidget(widget1);
-        widget2 = new QWidget(splitter);
-        widget2->setObjectName(QStringLiteral("widget2"));
-        horizontalLayout_6 = new QHBoxLayout(widget2);
+        splitter->addWidget(layoutWidget1);
+        layoutWidget2 = new QWidget(splitter);
+        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
+        horizontalLayout_6 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_6->setSpacing(6);
         horizontalLayout_6->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
-        ONpushButtonAZ = new QPushButton(widget2);
+        ONpushButtonAZ = new QPushButton(layoutWidget2);
         ONpushButtonAZ->setObjectName(QStringLiteral("ONpushButtonAZ"));
         ONpushButtonAZ->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 255, 255, 255), stop:0.495 rgba(255, 255, 255, 255), stop:0.505 rgba(255, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));"));
 
         horizontalLayout_6->addWidget(ONpushButtonAZ);
 
-        STBYpushButtonAZ = new QPushButton(widget2);
+        STBYpushButtonAZ = new QPushButton(layoutWidget2);
         STBYpushButtonAZ->setObjectName(QStringLiteral("STBYpushButtonAZ"));
         STBYpushButtonAZ->setStyleSheet(QStringLiteral("background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));"));
 
         horizontalLayout_6->addWidget(STBYpushButtonAZ);
 
-        SLEWpushButtonAZ = new QPushButton(widget2);
+        SLEWpushButtonAZ = new QPushButton(layoutWidget2);
         SLEWpushButtonAZ->setObjectName(QStringLiteral("SLEWpushButtonAZ"));
         SLEWpushButtonAZ->setStyleSheet(QStringLiteral("background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));"));
 
         horizontalLayout_6->addWidget(SLEWpushButtonAZ);
 
-        MANpushButtonAZ = new QPushButton(widget2);
+        MANpushButtonAZ = new QPushButton(layoutWidget2);
         MANpushButtonAZ->setObjectName(QStringLiteral("MANpushButtonAZ"));
         MANpushButtonAZ->setStyleSheet(QStringLiteral("background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));"));
 
         horizontalLayout_6->addWidget(MANpushButtonAZ);
 
-        splitter->addWidget(widget2);
+        splitter->addWidget(layoutWidget2);
 
         gridLayout_2->addWidget(splitter, 0, 0, 1, 1);
 
@@ -492,14 +494,14 @@ public:
         splitter_2 = new QSplitter(CrossElevation);
         splitter_2->setObjectName(QStringLiteral("splitter_2"));
         splitter_2->setOrientation(Qt::Vertical);
-        layoutWidget = new QWidget(splitter_2);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        horizontalLayout_7 = new QHBoxLayout(layoutWidget);
+        layoutWidget3 = new QWidget(splitter_2);
+        layoutWidget3->setObjectName(QStringLiteral("layoutWidget3"));
+        horizontalLayout_7 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_7->setSpacing(6);
         horizontalLayout_7->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        labelCrossElevation = new QLabel(layoutWidget);
+        labelCrossElevation = new QLabel(layoutWidget3);
         labelCrossElevation->setObjectName(QStringLiteral("labelCrossElevation"));
         labelCrossElevation->setFont(font1);
         labelCrossElevation->setAlignment(Qt::AlignCenter);
@@ -510,7 +512,7 @@ public:
 
         horizontalLayout_7->addItem(horizontalSpacer_6);
 
-        pProgramPushButtonCE = new QPushButton(layoutWidget);
+        pProgramPushButtonCE = new QPushButton(layoutWidget3);
         pProgramPushButtonCE->setObjectName(QStringLiteral("pProgramPushButtonCE"));
         sizePolicy.setHeightForWidth(pProgramPushButtonCE->sizePolicy().hasHeightForWidth());
         pProgramPushButtonCE->setSizePolicy(sizePolicy);
@@ -519,7 +521,7 @@ public:
 
         horizontalLayout_7->addWidget(pProgramPushButtonCE);
 
-        splitter_2->addWidget(layoutWidget);
+        splitter_2->addWidget(layoutWidget3);
         layoutWidget_2 = new QWidget(splitter_2);
         layoutWidget_2->setObjectName(QStringLiteral("layoutWidget_2"));
         verticalLayout_7 = new QVBoxLayout(layoutWidget_2);
@@ -942,6 +944,11 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        indicator1 = new QLabel(ACU_onoff);
+        indicator1->setObjectName(QStringLiteral("indicator1"));
+
+        horizontalLayout->addWidget(indicator1);
+
         ONpushButton = new QPushButton(ACU_onoff);
         ONpushButton->setObjectName(QStringLiteral("ONpushButton"));
         ONpushButton->setStyleSheet(QStringLiteral("background-color: rgb(85, 255, 0);"));
@@ -953,6 +960,11 @@ public:
         OFFpushButton->setStyleSheet(QStringLiteral("background-color: rgb(255, 0, 0);"));
 
         horizontalLayout->addWidget(OFFpushButton);
+
+        indicator2 = new QLabel(ACU_onoff);
+        indicator2->setObjectName(QStringLiteral("indicator2"));
+
+        horizontalLayout->addWidget(indicator2);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -987,9 +999,9 @@ public:
         splitter_6 = new QSplitter(PrgModeGroupBox);
         splitter_6->setObjectName(QStringLiteral("splitter_6"));
         splitter_6->setOrientation(Qt::Vertical);
-        widget3 = new QWidget(splitter_6);
-        widget3->setObjectName(QStringLiteral("widget3"));
-        horizontalLayout_18 = new QHBoxLayout(widget3);
+        layoutWidget4 = new QWidget(splitter_6);
+        layoutWidget4->setObjectName(QStringLiteral("layoutWidget4"));
+        horizontalLayout_18 = new QHBoxLayout(layoutWidget4);
         horizontalLayout_18->setSpacing(6);
         horizontalLayout_18->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_18->setObjectName(QStringLiteral("horizontalLayout_18"));
@@ -997,13 +1009,13 @@ public:
         verticalLayout_17 = new QVBoxLayout();
         verticalLayout_17->setSpacing(6);
         verticalLayout_17->setObjectName(QStringLiteral("verticalLayout_17"));
-        label = new QLabel(widget3);
+        label = new QLabel(layoutWidget4);
         label->setObjectName(QStringLiteral("label"));
         label->setAlignment(Qt::AlignCenter);
 
         verticalLayout_17->addWidget(label);
 
-        lineEdit = new QLineEdit(widget3);
+        lineEdit = new QLineEdit(layoutWidget4);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
@@ -1015,7 +1027,7 @@ public:
         horizontalLayout_17 = new QHBoxLayout();
         horizontalLayout_17->setSpacing(6);
         horizontalLayout_17->setObjectName(QStringLiteral("horizontalLayout_17"));
-        radioButton = new QRadioButton(widget3);
+        radioButton = new QRadioButton(layoutWidget4);
         radioButton->setObjectName(QStringLiteral("radioButton"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
@@ -1026,7 +1038,7 @@ public:
 
         horizontalLayout_17->addWidget(radioButton);
 
-        AutoSequence = new QPushButton(widget3);
+        AutoSequence = new QPushButton(layoutWidget4);
         AutoSequence->setObjectName(QStringLiteral("AutoSequence"));
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Expanding);
         sizePolicy2.setHorizontalStretch(0);
@@ -1045,10 +1057,10 @@ public:
 
         horizontalLayout_18->addLayout(horizontalLayout_17);
 
-        splitter_6->addWidget(widget3);
-        widget4 = new QWidget(splitter_6);
-        widget4->setObjectName(QStringLiteral("widget4"));
-        horizontalLayout_19 = new QHBoxLayout(widget4);
+        splitter_6->addWidget(layoutWidget4);
+        layoutWidget5 = new QWidget(splitter_6);
+        layoutWidget5->setObjectName(QStringLiteral("layoutWidget5"));
+        horizontalLayout_19 = new QHBoxLayout(layoutWidget5);
         horizontalLayout_19->setSpacing(6);
         horizontalLayout_19->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_19->setObjectName(QStringLiteral("horizontalLayout_19"));
@@ -1056,7 +1068,7 @@ public:
         verticalLayout_18 = new QVBoxLayout();
         verticalLayout_18->setSpacing(6);
         verticalLayout_18->setObjectName(QStringLiteral("verticalLayout_18"));
-        label_2 = new QLabel(widget4);
+        label_2 = new QLabel(layoutWidget5);
         label_2->setObjectName(QStringLiteral("label_2"));
         QFont font7;
         font7.setPointSize(11);
@@ -1065,7 +1077,7 @@ public:
 
         verticalLayout_18->addWidget(label_2);
 
-        lineEdit_2 = new QLineEdit(widget4);
+        lineEdit_2 = new QLineEdit(layoutWidget5);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
@@ -1081,7 +1093,7 @@ public:
         verticalLayout_19 = new QVBoxLayout();
         verticalLayout_19->setSpacing(6);
         verticalLayout_19->setObjectName(QStringLiteral("verticalLayout_19"));
-        label_3 = new QLabel(widget4);
+        label_3 = new QLabel(layoutWidget5);
         label_3->setObjectName(QStringLiteral("label_3"));
         QFont font8;
         font8.setPointSize(11);
@@ -1094,7 +1106,7 @@ public:
 
         verticalLayout_19->addWidget(label_3);
 
-        lineEdit_3 = new QLineEdit(widget4);
+        lineEdit_3 = new QLineEdit(layoutWidget5);
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
@@ -1103,10 +1115,10 @@ public:
 
         horizontalLayout_19->addLayout(verticalLayout_19);
 
-        splitter_6->addWidget(widget4);
-        widget5 = new QWidget(splitter_6);
-        widget5->setObjectName(QStringLiteral("widget5"));
-        horizontalLayout_22 = new QHBoxLayout(widget5);
+        splitter_6->addWidget(layoutWidget5);
+        layoutWidget6 = new QWidget(splitter_6);
+        layoutWidget6->setObjectName(QStringLiteral("layoutWidget6"));
+        horizontalLayout_22 = new QHBoxLayout(layoutWidget6);
         horizontalLayout_22->setSpacing(6);
         horizontalLayout_22->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_22->setObjectName(QStringLiteral("horizontalLayout_22"));
@@ -1117,18 +1129,18 @@ public:
         horizontalLayout_20 = new QHBoxLayout();
         horizontalLayout_20->setSpacing(6);
         horizontalLayout_20->setObjectName(QStringLiteral("horizontalLayout_20"));
-        label_4 = new QLabel(widget5);
+        label_4 = new QLabel(layoutWidget6);
         label_4->setObjectName(QStringLiteral("label_4"));
 
         horizontalLayout_20->addWidget(label_4);
 
-        dateEdit = new QDateEdit(widget5);
+        dateEdit = new QDateEdit(layoutWidget6);
         dateEdit->setObjectName(QStringLiteral("dateEdit"));
         dateEdit->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout_20->addWidget(dateEdit);
 
-        timeEdit = new QTimeEdit(widget5);
+        timeEdit = new QTimeEdit(layoutWidget6);
         timeEdit->setObjectName(QStringLiteral("timeEdit"));
         timeEdit->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
@@ -1140,18 +1152,18 @@ public:
         horizontalLayout_21 = new QHBoxLayout();
         horizontalLayout_21->setSpacing(6);
         horizontalLayout_21->setObjectName(QStringLiteral("horizontalLayout_21"));
-        label_5 = new QLabel(widget5);
+        label_5 = new QLabel(layoutWidget6);
         label_5->setObjectName(QStringLiteral("label_5"));
 
         horizontalLayout_21->addWidget(label_5);
 
-        dateEdit_2 = new QDateEdit(widget5);
+        dateEdit_2 = new QDateEdit(layoutWidget6);
         dateEdit_2->setObjectName(QStringLiteral("dateEdit_2"));
         dateEdit_2->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout_21->addWidget(dateEdit_2);
 
-        timeEdit_2 = new QTimeEdit(widget5);
+        timeEdit_2 = new QTimeEdit(layoutWidget6);
         timeEdit_2->setObjectName(QStringLiteral("timeEdit_2"));
         timeEdit_2->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
@@ -1170,7 +1182,7 @@ public:
 
         verticalLayout_21->addItem(verticalSpacer);
 
-        pushButton = new QPushButton(widget5);
+        pushButton = new QPushButton(layoutWidget6);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setStyleSheet(QStringLiteral("background-color: rgb(170, 170, 255);"));
 
@@ -1183,7 +1195,7 @@ public:
 
         horizontalLayout_22->addLayout(verticalLayout_21);
 
-        splitter_6->addWidget(widget5);
+        splitter_6->addWidget(layoutWidget6);
 
         verticalLayout_22->addWidget(splitter_6);
 
@@ -1191,13 +1203,6 @@ public:
         gridLayout_5->addWidget(PrgModeGroupBox, 1, 1, 1, 1);
 
         serverWindow->setCentralWidget(centralWidget);
-        ACU_onoff->raise();
-        labelTime->raise();
-        Azimuth->raise();
-        SpeedLabelAzimuth->raise();
-        CrossElevation->raise();
-        Elevation->raise();
-        PrgModeGroupBox->raise();
         menuBar = new QMenuBar(serverWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1183, 21));
@@ -1286,8 +1291,10 @@ public:
         SLEWpushButtonE->setText(QApplication::translate("serverWindow", "SLEW", 0));
         MANpushButtonE->setText(QApplication::translate("serverWindow", "MAN", 0));
         ACU_onoff->setTitle(QApplication::translate("serverWindow", "ACU_on/off", 0));
+        indicator1->setText(QString());
         ONpushButton->setText(QApplication::translate("serverWindow", "ON", 0));
         OFFpushButton->setText(QApplication::translate("serverWindow", "OFF", 0));
+        indicator2->setText(QString());
         ACU->setText(QApplication::translate("serverWindow", "ACU On-OFF", 0));
         PrgModeGroupBox->setTitle(QApplication::translate("serverWindow", "ProgMode", 0));
         label->setText(QApplication::translate("serverWindow", "SAT ID", 0));

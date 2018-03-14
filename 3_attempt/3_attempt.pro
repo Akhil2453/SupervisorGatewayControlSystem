@@ -21,3 +21,6 @@ HEADERS  += serverwindow.h \
 
 FORMS    += serverwindow.ui \
     clientwindow.ui
+
+RESOURCES += \
+    img.qrc

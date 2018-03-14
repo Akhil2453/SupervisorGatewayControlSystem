@@ -34,6 +34,8 @@ void serverWindow::Time()
 
 void serverWindow::on_ONpushButton_clicked()
 {
+    QPixmap pic(":ON.jpg");
+    ui->indicator1->setPixmap(pic);
     cWind = new clientWindow(this);
     cWind->setLineText(s, t, u);
     cWind->show();
@@ -41,8 +43,10 @@ void serverWindow::on_ONpushButton_clicked()
 
 void serverWindow::on_OFFpushButton_clicked()
 {
-    cWind = new clientWindow(this);
-    cWind->close();
+    QPixmap pic(":OFF.jpg");
+    ui->indicator2->setPixmap(pic);
+    //cWind = new clientWindow(this);
+    //cWind->close();
 }
 
 void serverWindow::on_AzimuthDial_actionTriggered(int action)
